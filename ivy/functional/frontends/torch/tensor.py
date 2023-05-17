@@ -1169,6 +1169,9 @@ class Tensor:
             torch_frontend.log(torch_frontend.real(torch_frontend.diagonal(chol)))
         )
 
+    def bernoulli(self, *, generator=None, out=None):
+        return torch_frontend.bernoulli(self, generator=generator, out=out)
+
 
 class Size(tuple):
     def __new__(cls, iterable=()):
